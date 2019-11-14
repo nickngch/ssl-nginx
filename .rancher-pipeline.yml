@@ -1,4 +1,9 @@
 stages:
+- name: Generate Certificate
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: sh self_sign_tls.sh nginx.nick-test.com 127.0.0.1
 - name: Build Image
   steps:
   - publishImageConfig:
@@ -7,10 +12,5 @@ stages:
       tag: nickngch90/ssl-nginx:latest
       pushRemote: true
       registry: index.docker.io
-- name: Generate Certificate
-  steps:
-  - runScriptConfig:
-      image: node:latest
-      shellScript: sh self_sign_tls.sh nginx.nick-test.com 127.0.0.1
 timeout: 60
 notification: {}

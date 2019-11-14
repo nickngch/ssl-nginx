@@ -2,7 +2,7 @@ stages:
 - name: Build Image
   steps:
   - publishImageConfig:
-      dockerfilePath: ./Dockerfile
+      dockerfilePath: ./dockerfile
       buildContext: .
       tag: nickngch90/ssl-nginx:latest
       pushRemote: true

@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: sh self_sign_tls.sh nginx.nick-test.com 127.0.0.1
+      shellScript: sh self_sign_tls.sh nginx.nick-test.com
 - name: Build Image
   steps:
   - publishImageConfig:

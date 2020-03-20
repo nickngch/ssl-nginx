@@ -1,4 +1,12 @@
 stages:
+- name: Generate Certificate
+  steps:
+  - runScriptConfig:
+      image: ubuntu:latest
+      shellScript: ./self_sign_tls.sh proxy.nick-test.com 127.0.0.1
+timeout: 60
+notification: {}
+stages:
 - name: Build Image
   steps:
   - publishImageConfig:

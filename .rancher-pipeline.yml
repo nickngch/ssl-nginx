@@ -1,9 +1,11 @@
 stages:
-- name: build
+- name: Build Image
   steps:
   - publishImageConfig:
-      dockerfilePath: ./Dockerfile
+      dockerfilePath: ./dockerfile
       buildContext: .
-      tag: nickngch90/nginx-ssl
+      tag: nickngch90/ssl-nginx:latest
+      pushRemote: true
+      registry: index.docker.io
 timeout: 60
 notification: {}

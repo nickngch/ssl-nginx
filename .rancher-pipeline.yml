@@ -4,5 +4,13 @@ stages:
   - runScriptConfig:
       image: ubuntu:latest
       shellScript: ./self_sign_tls.sh proxy.nick-test.com 127.0.0.1
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: nickngch90/ssl-nginx:latest
+      pushRemote: true
+      registry: 127.0.0.1:34130
 timeout: 60
 notification: {}

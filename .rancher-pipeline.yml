@@ -3,7 +3,9 @@ stages:
   steps:
   - runScriptConfig:
       image: ubuntu:18.04
-      shellScript: ./self_sign_tls.sh proxy.nick-test.com 127.0.0.1
+      shellScript: |-
+        apt update && apt install -y openssl
+        ./self_sign_tls.sh proxy.nick-test.com 127.0.0.1
 - name: build
   steps:
   - publishImageConfig:

@@ -12,7 +12,8 @@ stages:
       dockerfilePath: ./dockerfile
       buildContext: .
       tag: nickngch90/ssl-nginx:latest
-      registry: index.docker.io
+      pushRemote: true
+      registry: docker-registry.docker-registry.svc.cluster.local
 - name: deploy
   steps:
   - applyYamlConfig:

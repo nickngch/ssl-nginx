@@ -13,6 +13,10 @@ stages:
       buildContext: .
       tag: nickngch90/ssl-nginx:latest
       pushRemote: true
-      registry: index.docker.io
+      registry: 127.0.0.1:34130
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
 timeout: 60
 notification: {}

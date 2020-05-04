@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nickngch90/ssl-nginx:latest
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 443
 

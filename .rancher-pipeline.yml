@@ -12,7 +12,8 @@ stages:
       dockerfilePath: ./dockerfile
       buildContext: .
       tag: nickngch90/ssl-nginx:latest
-      registry: 10.43.126.118:5000
+      pushRemote: true
+      registry: docker-registry.default.svc.cluster.local:5000
     env:
       PLUGIN_INSECURE: "true"
 - name: deploy

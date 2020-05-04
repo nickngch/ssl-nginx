@@ -18,9 +18,5 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
       namespace: default
-    envFrom:
-    - sourceName: cideploy
-      sourceKey: token-2sr87
-      targetKey: API_TOKEN
 timeout: 60
 notification: {}

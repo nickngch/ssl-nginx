@@ -12,6 +12,8 @@ stages:
       dockerfilePath: ./dockerfile
       buildContext: .
       tag: ssl-nginx:${CICD_EXECUTION_SEQUENCE}
+      pushRemote: true
+      registry: 13.59.136.164:30553
 - name: deploy
   steps:
   - applyYamlConfig:

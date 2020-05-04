@@ -13,6 +13,8 @@ stages:
       buildContext: .
       tag: nickngch90/ssl-nginx:latest
       registry: 10.43.126.118:5000
+    env:
+      PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:

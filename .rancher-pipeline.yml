@@ -21,6 +21,6 @@ stages:
     envFrom:
     - sourceName: cideploy
       sourceKey: token-2sr87
-      targetKey: API_TOKEN
+      targetKey: serviceAccount
 timeout: 60
 notification: {}

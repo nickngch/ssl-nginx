@@ -13,7 +13,7 @@ stages:
       buildContext: .
       tag: ssl-nginx:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: docker-registry.default.svc.cluster.local
+      registry: docker-registry.default.svc.cluster.local:5000
     env:
       PLUGIN_INSECURE: "true"
 - name: deploy

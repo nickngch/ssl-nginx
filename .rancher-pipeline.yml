@@ -17,5 +17,10 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+      targetNamespace: default
+    envFrom:
+    - sourceName: some-secret-name
+      sourceKey: some-key-name
+      targetKey: API_TOKEN
 timeout: 60
 notification: {}

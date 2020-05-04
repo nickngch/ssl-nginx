@@ -17,7 +17,7 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-      targetNamespace: default
+      namespace: default
     envFrom:
     - sourceName: cideploy
       sourceKey: token-2sr87

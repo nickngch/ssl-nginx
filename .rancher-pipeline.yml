@@ -11,7 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./dockerfile
       buildContext: .
-      tag: nickngch90/ssl-nginx:latest
+      tag: ssl-nginx:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: docker-registry.default.svc.cluster.local:5000
     env:

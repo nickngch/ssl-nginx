@@ -6,10 +6,6 @@ stages:
       shellScript: |-
         apt update && apt install -y openssl
         ./self_sign_tls.sh proxy.nick-test.com 127.0.0.1
-    envFrom:
-    - sourceName: cideploy
-      sourceKey: token-2sr87
-      targetKey: API_TOKEN
 - name: build
   steps:
   - publishImageConfig:
@@ -22,5 +18,9 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
       namespace: default
+    envFrom:
+    - sourceName: cideploy
+      sourceKey: token-2sr87
+      targetKey: API_TOKEN
 timeout: 60
 notification: {}

@@ -20,4 +20,6 @@ spec:
         image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         ports:
         - containerPort: 443
+      imagePullSecrets:
+      - name: pipeline-docker-registry
 

@@ -17,10 +17,9 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-      targetNamespace: default
     envFrom:
-    - sourceName: some-secret-name
-      sourceKey: some-key-name
+    - sourceName: cideploy
+      sourceKey: token-2sr87
       targetKey: API_TOKEN
 timeout: 60
 notification: {}

@@ -12,7 +12,6 @@ stages:
       dockerfilePath: ./dockerfile
       buildContext: .
       tag: nickngch90/ssl-nginx:latest
-      pushRemote: true
       registry: 10.43.126.118:5000
 - name: deploy
   steps:
